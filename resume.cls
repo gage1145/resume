@@ -97,13 +97,24 @@
 }
 
 \newcommand{\pub}[4]{
-    \begin{twocolentry}{#1}
+    \begin{pubs}{#1}
         \textbf{#2}\\
+        % \vspace{0.1cm}
+        \leftskip 1cm #3. 
+        %\vspace{0.1cm}
+        \textbf{\href{https://doi.org/#4}{#4}}
         \vspace{0.1cm}
-        \leftskip 1cm #3\\
+    \end{pubs}
+}
+
+\newcommand{\patent}[5]{
+    \begin{patents}{\textbf{Filed:} #1\\\textbf{Issued:} #2}
+        \textbf{#3}\\
         \vspace{0.1cm}
-        \href{https://doi.org/#4}{#4}
-    \end{twocolentry}
+        \leftskip 1cm #4\\
+        \vspace{0.1cm}
+        \textit{U.S. Patent #5}
+    \end{patents}
 }
 
 \newenvironment{highlightsforbulletentries}{
