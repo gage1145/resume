@@ -19,7 +19,7 @@
 \RequirePackage{tabularx} % for making tables with fixed width columns
 \RequirePackage{array} % tabularx requires this
 \RequirePackage[dvipsnames]{xcolor} % for coloring text
-\definecolor{primaryColor}{RGB}{0, 0, 0} % define primary color
+\definecolor{primaryColor}{RGB}{0, 0, 150} % define primary color
 \RequirePackage{enumitem} % for customizing lists
 \RequirePackage{fontawesome5} % for using icons
 \RequirePackage{amsmath} % for math
