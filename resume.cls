@@ -81,7 +81,7 @@
         parsep=0.10 cm,
         partopsep=0pt,
         itemsep=0pt,
-        leftmargin=0 cm + 10pt
+        leftmargin=1cm
     ]
 }{
     \end{itemize}
