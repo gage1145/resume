@@ -1,26 +1,26 @@
-name: Update README Date
+# name: Update README Date
 
-on:
-  push:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
 
-jobs:
-  update-readme:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+# jobs:
+#   update-readme:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout repository
+#         uses: actions/checkout@v4
 
-      - name: Update last updated date in README
-        run: |
-          DATE=$(date "+%Y-%m-%d")
-          sed -i "s/Last updated: .*/Last updated: $DATE/" README.md
+#       - name: Update last updated date in README
+#         run: |
+#           DATE=$(date "+%Y-%m-%d")
+#           sed -i "s/Last updated: .*/Last updated: $DATE/" README.md
 
-      - name: Commit and push changes
-        run: |
-          git config --global user.name "github-actions"
-          git config --global user.email "github-actions@github.com"
-          git add README.md
-          git commit -m "Update last updated date" || exit 0
-          git push
+#       - name: Commit and push changes
+#         run: |
+#           git config --global user.name "github-actions"
+#           git config --global user.email "github-actions@github.com"
+#           git add README.md
+#           git commit -m "Update last updated date" || exit 0
+#           git push
