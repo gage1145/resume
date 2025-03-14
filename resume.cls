@@ -80,40 +80,21 @@
     \end{itemize}
 } % new environment for highlights
 
-\newcommand{\AND}{\kern 5.0 pt \unskip
-        \cleaders\copy\ANDbox\hskip\wd\ANDbox
-        \ignorespaces\kern 5.0 pt
-}
-
-\newcommand{\me}{
-    \textbf{\textit{Gage R Rowden}}
-}
-
-\newcommand{\pub}[4]{
-    \begin{pubs}{#1}
-        \textbf{#2}\\
-        % \vspace{0.1cm}
-        \leftskip 1cm #3. 
-        %\vspace{0.1cm}
-        \textbf{\href{https://doi.org/#4}{#4}}
-        \vspace{0.1cm}
-    \end{pubs}
-}
-
-\newcommand{\patent}[5]{
-    \begin{patents}{\textbf{Filed:} #1\\\textbf{Issued:} #2}
-        \textbf{#3}\\
-        \vspace{0.1cm}
-        \leftskip 1cm #4\\
-        \vspace{0.1cm}
-        \textit{U.S. Patent #5}
-    \end{patents}
+\newenvironment{skills}{
+    \begin{multicols}{3}
+        \begin{itemize}
+            \setlength{\itemsep}{0pt}
+            \setlength{\parskip}{0pt}
+            \setlength{\parsep}{0pt}     
+}{
+        \end{itemize}
+    \end{multicols}
 }
 
 \newenvironment{highlightsforbulletentries}{
     \begin{itemize}[
-        topsep=0.10 cm,
-        parsep=0.10 cm,
+        topsep=0.10cm,
+        parsep=0.10cm,
         partopsep=0pt,
         itemsep=0pt,
         leftmargin=10pt
@@ -123,11 +104,7 @@
 } % new environment for highlights for bullet entries
 
 \newenvironment{onecolentry}{
-    \begin{adjustwidth}{
-        0 cm + 0.00001 cm
-    }{
-        0 cm + 0.00001 cm
-    }
+    \begin{adjustwidth}{0cm + 0.00001cm}{0cm + 0.00001cm}
 }{
     \end{adjustwidth}
 } % new environment for one column entries
@@ -138,10 +115,22 @@
     \setcolumnwidth{\fill, 4.5 cm}
     \begin{paracol}{2}
 }{
-    \switchcolumn \raggedleft \secondColumn
+    \switchcolumn\raggedleft\secondColumn
     \end{paracol}
     \endonecolentry
 } % new environment for two column entries
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#2}
+    \setcolumnwidth{, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #3} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for three column entries
 
 \newenvironment{pubs}[2][]{
     \onecolentry
@@ -165,23 +154,49 @@
     \endonecolentry
 } % new environment for two column entries
 
-\newenvironment{threecolentry}[3][]{
-    \onecolentry
-    \def\thirdColumn{#3}
-    \setcolumnwidth{, \fill, 4.5 cm}
-    \begin{paracol}{3}
-    {\raggedright #2} \switchcolumn
-}{
-    \switchcolumn \raggedleft \thirdColumn
-    \end{paracol}
-    \endonecolentry
-} % new environment for three column entries
-
 \newenvironment{header}{
     \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
 }{
     \par\kern\topsep
 } % new environment for the header
+
+% Adds a pipe separator. Used in the header for contact info.
+\newcommand{\AND}{\kern 5.0 pt \unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces\kern 5.0 pt
+}
+
+% Bolds and italicizes my name.
+\newcommand{\me}{
+    \textbf{\textit{Gage R Rowden}}
+}
+
+\newcommand{\pub}[4]{
+    \begin{pubs}{#1}
+        \textbf{#2}\\
+        \leftskip 1cm #3.
+        \textbf{\href{https://doi.org/#4}{#4}}
+        \vspace{0.1cm}
+    \end{pubs}
+}
+
+\newcommand{\pres}[4]{
+    \begin{pubs}{#1}
+        \textbf{#2}\\
+        \leftskip 1cm #3. #4
+        \vspace{0.1cm}
+    \end{pubs}
+}
+
+\newcommand{\patent}[5]{
+    \begin{patents}{\textbf{Filed:} #1\\\textbf{Issued:} #2}
+        \textbf{#3}\\
+        \vspace{0.1cm}
+        \leftskip 1cm #4\\
+        \vspace{0.1cm}
+        \textit{U.S. Patent #5}
+    \end{patents}
+}
 
 \newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
   \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
