@@ -36,6 +36,7 @@
 \RequirePackage{lastpage} % for getting the total number of pages
 \RequirePackage{changepage} % for one column entries (adjustwidth environment)
 \RequirePackage{paracol} % for two and three column entries
+\RequirePackage{multicol}
 \RequirePackage{ifthen} % for conditional statements
 \RequirePackage{needspace} % for avoiding page brake right after the section title
 \RequirePackage{iftex} % check if engine is pdflatex, xetex or luatex
@@ -63,18 +64,10 @@
 
 \titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
 
-\titlespacing{\section}{
-    % left space:
-    -1pt
-}{
-    % top space:
-    0.3 cm
-}{
-    % bottom space:
-    0.2 cm
-} % section title spacing
+\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm} % section title spacing
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+
 \newenvironment{highlights}{
     \begin{itemize}[
         topsep=0.10 cm,
