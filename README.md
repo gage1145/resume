@@ -7,7 +7,7 @@ I am a Lead Technical R&D Scientist at Priogen Corporation and a Researcher IV a
 
 ## Resume Details
 - **Format:** $\LaTeX$ and PDF
-- **Last Updated:**
+- **Last Updated:** 3/14/2025
 - **Contact Information:**
   - 📍 St. Paul, MN
   - 📧 [gage.rowden1145@gmail.com](mailto:gage.rowden1145@gmail.com)
