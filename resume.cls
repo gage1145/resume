@@ -110,6 +110,7 @@
 } % new environment for one column entries
 
 \newenvironment{twocolentry}[2][]{
+    \vspace{0.2cm}
     \onecolentry
     \def\secondColumn{#2}
     \setcolumnwidth{\fill, 4.5 cm}
@@ -118,6 +119,7 @@
     \switchcolumn\raggedleft\secondColumn
     \end{paracol}
     \endonecolentry
+    \vspace{0.10cm}
 } % new environment for two column entries
 
 \newenvironment{threecolentry}[3][]{
