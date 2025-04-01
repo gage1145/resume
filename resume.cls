@@ -220,4 +220,7 @@
 
 \AtBeginDocument{
   \pagestyle{plain}
+
+  \newsavebox\ANDbox
+    \sbox\ANDbox{$|$}
 }
