@@ -81,6 +81,7 @@
 } % new environment for highlights
 
 \newenvironment{skills}{
+    \setlength\multicolsep{0pt}
     \begin{multicols}{3}
         \begin{itemize}
             \setlength{\itemsep}{0pt}
@@ -89,6 +90,7 @@
 }{
         \end{itemize}
     \end{multicols}
+    \vspace{0.2cm}
 }
 
 \newenvironment{highlightsforbulletentries}{
@@ -210,6 +212,10 @@
     }}}%
   }%
 }%
+
+\newcommand{\subskill}[1]{
+    \textbf{#1}\vspace*{-\baselineskip+5pt}
+}
 
 % save the original href command in a new command:
 \let\hrefWithoutArrow\href
