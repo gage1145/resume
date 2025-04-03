@@ -156,7 +156,7 @@
 \newenvironment{software}[2][]{
     \onecolentry
     \def\secondColumn{\textbf{#2}}
-    \setcolumnwidth{\fill, 5cm}
+    \setcolumnwidth{\fill, 6cm}
     \begin{paracol}{2}
 }{
     \switchcolumn \raggedleft \secondColumn
