@@ -185,30 +185,37 @@
     \textbf{\textit{Gage R Rowden}}
 }
 
+% Custom command for inputting publications
 \newcommand{\pub}[4]{
-    \begin{pubs}{#1}
-        \textbf{#2}\\
-        \leftskip 1cm #3.
-        \textbf{\href{https://doi.org/#4}{#4}}
+    \begin{pubs}{#1} % Year
+        \textbf{#2}\\ % Title
+        \leftskip 1cm #3. % Authors
+        \textbf{\href{https://doi.org/#4}{#4}} % DOI
         \vspace{0.1cm}
     \end{pubs}
 }
 
+% Custom command for inputting presentations
 \newcommand{\pres}[4]{
-    \begin{pubs}{#1}
-        \textbf{#2}\\
-        \leftskip 1cm #3. #4
+    \begin{pubs}{#1} % Year
+        \textbf{#2}\\ % Title
+        \leftskip 1cm #3. #4 % Authors & Conference
         \vspace{0.1cm}
     \end{pubs}
 }
 
+% Custom command for inputting patents
 \newcommand{\patent}[5]{
-    \begin{patents}{\textbf{Filed:} #1\\\textbf{Issued:} #2}
-        \textbf{#3}\\
+    \begin{patents}
+        {
+            \textbf{Filed:} #1\\ % Filing date
+            \textbf{Issued:} #2 % Issued date
+        }
+        \textbf{#3}\\ % Title
         \vspace{0.1cm}
-        \leftskip 1cm #4\\
+        \leftskip 1cm #4\\ % Authors
         \vspace{0.1cm}
-        \textit{U.S. Patent #5}
+        \textit{U.S. Patent #5} % Patent number
     \end{patents}
 }
 
@@ -223,6 +230,7 @@
   }%
 }%
 
+% For adding sub-skills in the skills section
 \newcommand{\subskill}[1]{
     \textbf{#1}\vspace*{-\baselineskip+5pt}
 }
@@ -230,13 +238,7 @@
 % save the original href command in a new command:
 \let\hrefWithoutArrow\href
 
-% new command for external links:
-
-
-
 \AtBeginDocument{
-  \pagestyle{plain}
-
-  \newsavebox\ANDbox
-    \sbox\ANDbox{$|$}
+    \pagestyle{plain}
+    \newsavebox\ANDbox\sbox\ANDbox{$|$}
 }
