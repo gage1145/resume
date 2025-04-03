@@ -114,7 +114,7 @@
 \newenvironment{twocolentry}[2][]{
     \vspace{0.2cm}
     \onecolentry
-    \def\secondColumn{#2}
+    \def\secondColumn{\textbf{#2}}
     \setcolumnwidth{\fill, 4.5 cm}
     \begin{paracol}{2}
 }{
@@ -138,7 +138,7 @@
 
 \newenvironment{pubs}[2][]{
     \onecolentry
-    \def\secondColumn{#2}
+    \def\secondColumn{\textbf{#2}}
     \setcolumnwidth{\fill, 1.5cm}
     \begin{paracol}{2}
 }{
