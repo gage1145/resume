@@ -151,11 +151,28 @@
     \endonecolentry
 }
 
+% New environment for the software section
+\newenvironment{software}[2][]{
+    \onecolentry
+    \def\secondColumn{\textbf{#2}}
+    \setcolumnwidth{\fill, 5cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+% Header environment
 \newenvironment{header}{
     \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
 }{
     \par\kern\topsep
-} % new environment for the header
+}
+
+
+% Custom commands -------------------------------------------------------------
+
 
 % Adds a pipe separator. Used in the header for contact info.
 \newcommand{\AND}{\kern 5.0 pt \unskip
