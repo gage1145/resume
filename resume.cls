@@ -63,8 +63,10 @@
 \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
 
 
-\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+% Custom Environments ---------------------------------------------------------
 
+
+% New environment for highlights
 \newenvironment{highlights}{
     \begin{itemize}[
         topsep=0.10 cm,
@@ -75,8 +77,9 @@
     ]
 }{
     \end{itemize}
-} % new environment for highlights
+}
 
+% New environment for the skills section
 \newenvironment{skills}{
     \setlength\multicolsep{0pt}
     \begin{multicols}{3}
@@ -108,6 +111,7 @@
     \end{adjustwidth}
 } % new environment for one column entries
 
+% New environment for two column entries
 \newenvironment{twocolentry}[2][]{
     \vspace{0.2cm}
     \onecolentry
@@ -119,8 +123,9 @@
     \end{paracol}
     \endonecolentry
     \vspace{0.10cm}
-} % new environment for two column entries
+}
 
+% New environment for three column entries
 \newenvironment{threecolentry}[3][]{
     \onecolentry
     \def\thirdColumn{#2}
@@ -131,8 +136,9 @@
     \switchcolumn \raggedleft \thirdColumn
     \end{paracol}
     \endonecolentry
-} % new environment for three column entries
+}
 
+% New environment for the publications section
 \newenvironment{pubs}[2][]{
     \onecolentry
     \def\secondColumn{\textbf{#2}}
@@ -142,8 +148,9 @@
     \switchcolumn \raggedleft \secondColumn
     \end{paracol}
     \endonecolentry
-} % new environment for two column entries
+}
 
+% New environment for the patents section
 \newenvironment{patents}[2][]{
     \onecolentry
     \def\secondColumn{#2}
