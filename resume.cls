@@ -105,7 +105,7 @@
 \newenvironment{twocolentry}[2][]{
     \vspace{0.2cm}
     \onecolentry
-    \def\secondColumn{\textbf{#2}}
+    \def\secondColumn{#2}
     \setcolumnwidth{\fill, 4.5 cm}
     \begin{paracol}{2}
 }{
