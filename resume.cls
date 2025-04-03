@@ -2,54 +2,41 @@
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
-
 \LoadClass{article}
 
-% Packages:
+
+% Load Packages ---------------------------------------------------------------
+
+
 \RequirePackage[
-    ignoreheadfoot, % set margins without considering header and footer
-    top=2 cm, % seperation between body and page edge from the top
-    bottom=2 cm, % seperation between body and page edge from the bottom
-    left=2 cm, % seperation between body and page edge from the left
-    right=2 cm, % seperation between body and page edge from the right
-    footskip=1.0 cm, % seperation between body and footer
-    % showframe % for debugging 
-]{geometry} % for adjusting page geometry
-\RequirePackage{titlesec} % for customizing section titles
-\RequirePackage{tabularx} % for making tables with fixed width columns
-\RequirePackage{array} % tabularx requires this
-\RequirePackage[dvipsnames]{xcolor} % for coloring text
-\definecolor{primaryColor}{RGB}{0, 0, 150} % define primary color
-\RequirePackage{enumitem} % for customizing lists
-\RequirePackage{fontawesome5} % for using icons
-\RequirePackage{amsmath} % for math
+    ignoreheadfoot,
+    top=2cm,
+    bottom=2cm,
+    left=2cm,
+    right=2cm,
+    footskip=1.0cm
+]{geometry}
+\RequirePackage{titlesec}
+\RequirePackage{tabularx}
+\RequirePackage{array}
+\RequirePackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 150}
+\RequirePackage{enumitem} 
+\RequirePackage{fontawesome5}
 \RequirePackage[
     pdftitle={Gage Rowden's CV},
     pdfauthor={Gage Rowden},
     pdfcreator={LaTeX with RenderCV},
     colorlinks=true,
     urlcolor=primaryColor
-]{hyperref} % for links, metadata and bookmarks
-\RequirePackage[pscoord]{eso-pic} % for floating text on the page
-\RequirePackage{calc} % for calculating lengths
-\RequirePackage{bookmark} % for bookmarks
-\RequirePackage{lastpage} % for getting the total number of pages
-\RequirePackage{changepage} % for one column entries (adjustwidth environment)
-\RequirePackage{paracol} % for two and three column entries
+]{hyperref}
+\RequirePackage[pscoord]{eso-pic}
+\RequirePackage{calc}
+\RequirePackage{bookmark}
+\RequirePackage{changepage}
+\RequirePackage{paracol}
 \RequirePackage{multicol}
-\RequirePackage{ifthen} % for conditional statements
-\RequirePackage{needspace} % for avoiding page brake right after the section title
-\RequirePackage{iftex} % check if engine is pdflatex, xetex or luatex
-
-% Ensure that generate pdf is machine readable/ATS parsable:
-\ifPDFTeX
-    \input{glyphtounicode}
-    \pdfgentounicode=1
-    \RequirePackage[T1]{fontenc}
-    \RequirePackage[utf8]{inputenc}
-    \RequirePackage{lmodern}
-\fi
-
+\RequirePackage{needspace}
 \RequirePackage{charter}
 
 % Some settings:
