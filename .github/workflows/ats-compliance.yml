@@ -1,0 +1,56 @@
+name: Check ATS Optimization
+
+on:
+  push:
+    paths:
+      - "data_science_resume.tex"
+  pull_request:
+    paths:
+      - "data_science_resume.tex"
+
+jobs:
+  build-resume:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install TeX Live
+        run: sudo apt-get install -y texlive-latex-base texlive-latex-extra texlive-fonts-recommended
+
+      - name: Compile LaTeX to PDF
+        run: pdflatex -interaction=nonstopmode -halt-on-error resume.tex
+
+      - name: Extract text from PDF
+        run: pdftotext resume.pdf resume.txt
+
+      - name: Check if PDF is selectable
+        run: |
+          if [ ! -s resume.txt ]; then
+            echo "❌ ERROR: The PDF does not contain selectable text (potential ATS issue)."
+            exit 1
+          fi
+
+      - name: Validate ATS Keywords
+        run: |
+          REQUIRED_KEYWORDS=("R" "Python" "SQL" "Shiny" "Data Visualization" "GitHub" "CI/CD")
+          MISSING=()
+          for keyword in "${REQUIRED_KEYWORDS[@]}"; do
+            if ! grep -q "$keyword" resume.txt; then
+              MISSING+=("$keyword")
+            fi
+          done
+          if [ ${#MISSING[@]} -ne 0 ]; then
+            echo "❌ ERROR: Missing required ATS keywords: ${MISSING[*]}"
+            exit 1
+          fi
+
+      - name: Check for ATS-Unfriendly Elements
+        run: |
+          if grep -E "tabular|multirow|twocolentry|onecolentry" resume.tex; then
+            echo "❌ ERROR: Detected tables or multi-column formatting (ATS issue)."
+            exit 1
+          fi
+
+      - name: Success Message
+        run: echo "✅ Resume is ATS-optimized!"
