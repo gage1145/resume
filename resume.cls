@@ -93,23 +93,12 @@
     \vspace{0.2cm}
 }
 
-\newenvironment{highlightsforbulletentries}{
-    \begin{itemize}[
-        topsep=0.10cm,
-        parsep=0.10cm,
-        partopsep=0pt,
-        itemsep=0pt,
-        leftmargin=10pt
-    ]
-}{
-    \end{itemize}
-} % new environment for highlights for bullet entries
-
+% New environment for one column entries
 \newenvironment{onecolentry}{
     \begin{adjustwidth}{0cm + 0.00001cm}{0cm + 0.00001cm}
 }{
     \end{adjustwidth}
-} % new environment for one column entries
+}
 
 % New environment for two column entries
 \newenvironment{twocolentry}[2][]{
@@ -160,7 +149,7 @@
     \switchcolumn \raggedleft \secondColumn
     \end{paracol}
     \endonecolentry
-} % new environment for two column entries
+}
 
 \newenvironment{header}{
     \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
