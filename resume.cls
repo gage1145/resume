@@ -38,7 +38,6 @@
 \RequirePackage{multicol}
 \RequirePackage{needspace}
 \RequirePackage{charter}
-% \RequirePackage[T1]{fontenc}
 \RequirePackage{fontspec}
 
 
@@ -230,7 +229,6 @@
 \let\hrefWithoutArrow\href
 
 \AtBeginDocument{
-    % \fontfamily{lmss}\selectfont
     \setmainfont{Calibri}
     \pagestyle{plain}
     \newsavebox\ANDbox\sbox\ANDbox{$|$}
