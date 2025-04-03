@@ -39,9 +39,12 @@
 \RequirePackage{needspace}
 \RequirePackage{charter}
 
-% Some settings:
+
+% Set Document Settings -------------------------------------------------------
+
+
 \raggedright
-\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
 \pagestyle{empty} % no header or footer
 \setcounter{secnumdepth}{0} % no section numbering
 \setlength{\parindent}{0pt} % no indentation
@@ -49,9 +52,16 @@
 \setlength{\columnsep}{0.15cm} % set column seperation
 \pagenumbering{gobble} % no page numbering
 
-\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titleformat{\section}{
+    \needspace{4\baselineskip}\bfseries\large
+}{}{0pt}{}[\vspace{1pt}\titlerule]
 
-\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm} % section title spacing
+% section title spacing
+\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
+
+% custom bullet points
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+
 
 \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
 
