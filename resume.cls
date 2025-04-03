@@ -24,8 +24,8 @@
 \RequirePackage{fontawesome5} % for using icons
 \RequirePackage{amsmath} % for math
 \RequirePackage[
-    pdftitle={John Doe's CV},
-    pdfauthor={John Doe},
+    pdftitle={Gage Rowden's CV},
+    pdfauthor={Gage Rowden},
     pdfcreator={LaTeX with RenderCV},
     colorlinks=true,
     urlcolor=primaryColor
