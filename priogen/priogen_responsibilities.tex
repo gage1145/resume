@@ -1,0 +1,81 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.75in]{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{parskip}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{helvet}
+\usepackage{datetime}
+\usepackage[USenglish]{isodate}
+\usepackage{fancyhdr}
+
+% Font and header
+\titleformat{\section}{\normalsize\bfseries}{\thesection}{1em}{}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=blue,
+}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\thepage}
+
+\begin{document}
+
+    \fontfamily{phv}\selectfont
+
+    % Title block
+    \begin{center}
+        {\LARGE\textbf{Gage Rowden, M.S.}}\\
+        \vspace{2pt}
+        \textit{Lead Technical R\&D Scientist, Priogen Corporation}\\
+        % \vspace{2pt}
+        % St.\ Paul, MN \quad|\quad\href{mailto:gager@priogen.bio}{gager@priogen.bio}\\
+        \vspace{8pt}
+        \textbf{\Large Responsibilities Overview} \\
+        \cleanlookdateon\textit{\today}
+    \end{center}
+
+    \vspace{0.5cm}
+
+    \section*{Data Analysis \& Pipeline Development}
+    \begin{itemize}
+        \item Design and maintain automated pipelines for processing high-throughput experimental data.
+        \item Develop custom scripts for data cleaning, transformation, and statistical analysis.
+        \item Implement reproducible workflows using Git and GitHub Actions.
+        \item Generate interactive visualizations and reports for internal teams, external partners, and clients.
+    \end{itemize}
+
+    \section*{Scientific \& Technical Leadership}
+    \begin{itemize}
+        \item Oversee experimental design strategies in collaboration with R\&D and service-side leadership.
+        \item Provide scientific direction for assay development and optimization.
+        \item Troubleshoot and resolve experimental or data quality issues.
+        \item Align data analytics efforts with diagnostic objectives and regulatory expectations.
+    \end{itemize}
+
+    \section*{Infrastructure}
+    \begin{itemize}
+        \item Manage internal systems for accessioning, tracking, and analyzing diagnostic data.
+        \item Maintain and update SOPs, documentation, and analysis protocols.
+        \item Design database infrastructure to support scalable and efficient data management and reporting.
+    \end{itemize}
+
+    \section*{Project \& Information Management}
+    \begin{itemize}
+        \item Act as a project liaison between the service lab, R\&D lab, leadership, and stakeholders.
+        \item Coordinate version control across projects to ensure consistent reproducibility.
+        \item Manage timelines and deliverables across concurrent data-driven projects.
+    \end{itemize}
+
+    \section*{Collaboration \& Mentorship}
+    \begin{itemize}
+        \item Train and mentor junior scientists in lab operations and analysis workflows.
+        \item Facilitate cross-functional collaboration between company departments.
+        \item Lead data review sessions to align research and services with company priorities.
+    \end{itemize}
+
+\end{document}
