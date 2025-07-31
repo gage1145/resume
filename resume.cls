@@ -183,7 +183,7 @@
 
 % Bolds and italicizes my name.
 \newcommand{\me}{
-    \textbf{\textit{Gage R Rowden}}
+    \textbf{\textit{Gage R Rowden}}%
 }
 
 % Custom command for inputting publications
