@@ -1,0 +1,36 @@
+% Pandoc template for the Quarto resume.
+%
+% This replaces Quarto's stock LaTeX template entirely. That is deliberate: the stock
+% template loads geometry and hyperref with its own options, and resume.cls already
+% loads both with ours, which raises an option clash. Everything typographic lives in
+% resume.cls -- this file only bridges pandoc's output into it.
+
+\documentclass{resume}
+
+% Commands pandoc emits that the stock template would otherwise define.
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\providecommand{\passthrough}[1]{#1}
+\providecommand{\pandocbounded}[1]{#1}
+
+$if(name)$
+\hypersetup{pdftitle={$name$'s Resume},pdfauthor={$name$}}
+$endif$
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+\begin{document}
+
+$for(include-before)$
+$include-before$
+$endfor$
+
+$body$
+
+$for(include-after)$
+$include-after$
+$endfor$
+
+\end{document}

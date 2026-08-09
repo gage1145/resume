@@ -1,10 +1,27 @@
+# LaTeX build artifacts
 *.aux
 *.fdb_latexmk
 *.fls
 *.log
 *.synctex.gz
-.vscode
 *.xdv
 *.bbl
 *.out
+*.dvi
+*.ps
 *.pdf
+*.dvi
+*.out.ps
+
+# Quarto
+/.quarto/
+**/*.quarto_ipynb
+
+# Quarto render outputs. resume.tex is the intermediate generated from
+# resume.qmd (kept via keep-tex) -- the hand-written original lives at
+# legacy/resume.tex, so these patterns are rooted to leave it tracked.
+/resume.tex
+/resume.html
+/resume_files/
+
+.vscode

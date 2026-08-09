@@ -1,0 +1,128 @@
+\documentclass{resume}
+
+\begin{document}
+
+    \begin{header}
+
+        \fontsize{25 pt}{25 pt}\selectfont Gage Rowden \textbf{Applied Data Scientist}\\
+        \vspace{5 pt}
+        \normalsize
+        \mbox{\hrefWithoutArrow{mailto:gage.rowden1145@gmail.com}{\faEnvelope{ }gage.rowden1145@gmail.com}}
+        \AND
+        \mbox{\hrefWithoutArrow{tel:+1-806-577-8008}{\faPhone{ }+1-806-577-8008}}
+        \AND
+        \mbox{\hrefWithoutArrow{https://github.com/gage1145}{\faGithub{ }gage1145}}
+        \AND
+        \mbox{\hrefWithoutArrow{https://orcid.org/0000-0002-7517-0480}{\faOrcid{ }ORCID}}
+        \AND
+        \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/gagerowden}{\faLinkedin{ }gagerowden}}
+    \end{header}
+
+    \vspace{5 pt - 0.3 cm}
+
+    \section{Professional Summary}
+        \begin{centering}
+        \Large{Applied Data Scientist specializing in high-throughput biological data and production analytics systems with extensive experience designing end-to-end data workflows, developing custom R packages, and building cloud-backed applications. Skilled in Python, SQL, AWS, and statistical modeling, with a strong foundation in experimental design and high-throughput data.}
+        
+        \end{centering}
+
+    \section{Experience}
+
+        \begin{twocolentry}{Jan 2024--present}
+            \textbf{Lead Data Scientist}, Priogen Corporation --- St.\ Paul, MN
+        \end{twocolentry}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Architected and deployed end-to-end \textbf{data analysis pipelines} to process high-throughput diagnostic datasets (up to 100 samples/week, \~240k rows of time-series data/project), reducing analysis time from ~4 hours to seconds.
+                \item Led \textbf{full-stack} development of a \textbf{Python}-based \textbf{LIMS} (PriLIMS) using \textbf{Django}, automating client data intake, tracking, and reporting, eliminating 10 hours/week of manual administrative work.
+                \item Implemented cloud-based infrastructure on \textbf{AWS} to support scalable \textbf{SQL} storage and analysis, improving system reliability and enabling secure multi-user access.
+                \item Introduced \textbf{Git}-based version control and \textbf{CI} workflows across projects, improving collaboration efficiency and significantly reducing deployment errors.
+            \end{highlights}
+        \end{onecolentry}
+
+        \begin{twocolentry}{Aug 2022--present}
+            \textbf{Researcher IV}, MNPRO, University of Minnesota --- St.\ Paul, MN
+        \end{twocolentry}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Developed a custom \textbf{R} package and automation scripts to standardize RT-QuIC data analysis, reducing hours of analysis time to seconds and increasing reproducibility across collaborating labs.
+                \item Streamlined \textbf{data processing} and reporting workflows using \textbf{R} and \textbf{Python} tools, reducing turnaround time for experimental results by \textbf{99\%}.
+                \item Built and evaluated \textbf{statistical models} to classify diagnostic outcomes, improving disease detection confidence.
+                \item Standardized cross-lab analytics and built reusable analytical frameworks adopted by multiple institutions.
+                % \item Co-authored 17 peer-reviewed publications, including 2 first-author papers, contributing to advancements in prion disease diagnostics and detection.
+                \item Led laboratory establishment, expansion, and workflow redesign, increasing research capacity.
+            \end{highlights}
+        \end{onecolentry}
+
+    \section{Skills}
+        \begin{skills}
+            \item Python 
+            \item Pandas \& NumPy
+            \item scikit-learn
+            \item R Tidyverse
+            \item SQL
+            % \item Jupyter
+            \item ETL pipeline development
+            \item Time-series analysis
+            \item Statistical analysis
+            \item Experimental design
+            \item Data visualization
+            \item AWS (cloud infrastructure)
+            \item Django \& REST API
+            \item Docker
+            \item Git \& GitHub
+            \item GitHub Actions (CI/CD)
+        \end{skills}
+    
+    % \section{Education}
+    %     \begin{twocolentry}{
+    %         Sep 2011--May 2016\\
+    %         Sep 2016--May 2018
+    %     }
+    %         \textbf{M.S. in Biotechnology}, Texas Tech University \\
+    %         \textbf{B.S. in Biology}, Texas Tech University
+    %     \end{twocolentry}
+
+    \section{Projects}
+        \begin{software}{\href{https://github.com/gage1145/quicR}{github.com/gage1145/quicR}}
+            \textbf{quicR: R Library for Streamlined Data Handling of RT-QuIC Assays}
+        \end{software}
+        \begin{highlights}
+            \item Developed an R package for the extraction, manipulation, and analysis of RT-QuIC data.
+            \item Stack: R, Tidyverse, RTools, Git, GitHub
+        \end{highlights}
+
+        \begin{software}{\href{https://priogen.xyz}{priogen.xyz}}
+            \textbf{PriLIMS: A Priogen Laboratory Information Management System}
+        \end{software}
+        \begin{highlights}
+            \item Designed and implemented a Django framework LIMS for Priogen Corp.
+            \item Stack: Python, R, Django, SQL, AWS, Git, GitHub, REST API, HTML, CSS, Javascript 
+        \end{highlights}
+        
+        \begin{software}{\href{https://github.com/gage1145/spotify-analysis}{github.com/gage1145/spotify-analysis}}
+            \textbf{spotify-analysis}
+        \end{software}
+        \begin{highlights}
+            \item Built clustering models using audio features and REST APIs to generate personalized music recommendations.
+            \item Stack: Python, Jupyter, REST API 
+        \end{highlights}
+
+    % \section{First Author Publications}
+    %     \begin{samepage}
+    %         \pub{2025}
+    %         {quicR: An R Library for Streamlined Data Handling of RT-QuIC Assays}
+    %         {\me, Peter A Larsen}
+    %         {10.2139/ssrn.5188757}
+
+    %         \pub{2023}
+    %         {Standardization of data analysis for RT-QuIC-based detection of chronic wasting disease}
+    %         {\me, \textit{et al}}
+    %         {10.3390/pathogens12020309}
+    %     \end{samepage}
+
+    % \section{Consultation}
+
+    %     Creighton University
+
+\end{document}

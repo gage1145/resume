@@ -1,0 +1,22 @@
+project:
+  type: default
+
+format:
+  pdf:
+    template: template.tex
+    # resume.cls is built around T1/charter/lmss; Quarto would otherwise default
+    # to xelatex and change the metrics.
+    pdf-engine: pdflatex
+    keep-tex: true
+    filters:
+      - resume.lua
+  html:
+    css: resume.css
+    toc: false
+    page-layout: article
+    anchor-sections: false
+    # Suppress the "Other Formats" margin block; it reserves a sidebar column
+    # and pushes the resume off centre.
+    format-links: false
+    filters:
+      - resume.lua

@@ -1,0 +1,160 @@
+---
+name: Gage Rowden
+headline: Applied Data Scientist
+contacts:
+  - icon: email
+    text: gage.rowden1145@gmail.com
+    url: "mailto:gage.rowden1145@gmail.com"
+  - icon: phone
+    text: +1-806-577-8008
+    url: "tel:+1-806-577-8008"
+  - icon: github
+    text: gage1145
+    url: "https://github.com/gage1145"
+  - icon: orcid
+    text: ORCID
+    url: "https://orcid.org/0000-0002-7517-0480"
+  - icon: linkedin
+    text: gagerowden
+    url: "https://www.linkedin.com/in/gagerowden"
+---
+
+# Professional Summary
+
+::: summary
+Applied Data Scientist specializing in high-throughput biological data and production
+analytics systems with extensive experience designing end-to-end data workflows,
+developing custom R packages, and building cloud-backed applications. Skilled in Python,
+SQL, AWS, and statistical modeling, with a strong foundation in experimental design and
+high-throughput data.
+:::
+
+# Experience
+
+::: {.twocolentry right="Jan 2024--present"}
+**Lead Data Scientist**, Priogen Corporation --- St.\ Paul, MN
+:::
+
+::: onecolentry
+::: highlights
+- Architected and deployed end-to-end **data analysis pipelines** to process
+  high-throughput diagnostic datasets (up to 100 samples/week, ∼240k rows of time-series
+  data/project), reducing analysis time from ∼4 hours to seconds.
+- Led **full-stack** development of a **Python**-based **LIMS** (PriLIMS) using
+  **Django**, automating client data intake, tracking, and reporting, eliminating
+  10 hours/week of manual administrative work.
+- Implemented cloud-based infrastructure on **AWS** to support scalable **SQL** storage
+  and analysis, improving system reliability and enabling secure multi-user access.
+- Introduced **Git**-based version control and **CI** workflows across projects,
+  improving collaboration efficiency and significantly reducing deployment errors.
+:::
+:::
+
+::: {.twocolentry right="Aug 2022--present"}
+**Researcher IV**, MNPRO, University of Minnesota --- St.\ Paul, MN
+:::
+
+::: onecolentry
+::: highlights
+- Developed a custom **R** package and automation scripts to standardize RT-QuIC data
+  analysis, reducing hours of analysis time to seconds and increasing reproducibility
+  across collaborating labs.
+- Streamlined **data processing** and reporting workflows using **R** and **Python**
+  tools, reducing turnaround time for experimental results by **99%**.
+- Built and evaluated **statistical models** to classify diagnostic outcomes, improving
+  disease detection confidence.
+- Standardized cross-lab analytics and built reusable analytical frameworks adopted by
+  multiple institutions.
+- Led laboratory establishment, expansion, and workflow redesign, increasing research
+  capacity.
+:::
+:::
+
+<!-- Disabled bullet for the MNPRO entry above:
+- Co-authored 17 peer-reviewed publications, including 2 first-author papers,
+  contributing to advancements in prion disease diagnostics and detection.
+-->
+
+# Skills
+
+::: skills
+- Python
+- Pandas & NumPy
+- scikit-learn
+- R Tidyverse
+- SQL
+- ETL pipeline development
+- Time-series analysis
+- Statistical analysis
+- Experimental design
+- Data visualization
+- AWS (cloud infrastructure)
+- Django & REST API
+- Docker
+- Git & GitHub
+- GitHub Actions (CI/CD)
+:::
+
+<!-- Disabled skill: Jupyter -->
+
+<!-- Disabled section: Education
+
+::: {.twocolentry right="Sep 2011--May 2016\\\\ Sep 2016--May 2018"}
+**M.S. in Biotechnology**, Texas Tech University \
+**B.S. in Biology**, Texas Tech University
+:::
+
+-->
+
+# Projects
+
+::: {.software url="https://github.com/gage1145/quicR" label="github.com/gage1145/quicR"}
+**quicR: R Library for Streamlined Data Handling of RT-QuIC Assays**
+:::
+
+::: highlights
+- Developed an R package for the extraction, manipulation, and analysis of RT-QuIC data.
+- Stack: R, Tidyverse, RTools, Git, GitHub
+:::
+
+::: {.software url="https://priogen.xyz" label="priogen.xyz"}
+**PriLIMS: A Priogen Laboratory Information Management System**
+:::
+
+::: highlights
+- Designed and implemented a Django framework LIMS for Priogen Corp.
+- Stack: Python, R, Django, SQL, AWS, Git, GitHub, REST API, HTML, CSS, Javascript
+:::
+
+::: {.software url="https:://modeling.gagerowden.com" label="modeling.gagerowden.com"}
+**Non-linear Kinetic Modeling of Protein Mis-Folding Assays**
+:::
+
+::: highlights
+- Built a non-linear least-squares model that accurately predicts the kinetic behavior of protein mis-folding assays.
+- Stack: R, Tidyverse, Quarto, Observable JS, Git, GitHub
+:::
+
+<!-- Disabled section: First Author Publications
+
+The \pub command in resume.cls takes {year}{title}{authors}{doi}. Re-enable via a raw
+latex block:
+
+```{=latex}
+\section{First Author Publications}
+    \begin{samepage}
+        \pub{2025}
+        {quicR: An R Library for Streamlined Data Handling of RT-QuIC Assays}
+        {\me, Peter A Larsen}
+        {10.2139/ssrn.5188757}
+
+        \pub{2023}
+        {Standardization of data analysis for RT-QuIC-based detection of chronic wasting disease}
+        {\me, \textit{et al}}
+        {10.3390/pathogens12020309}
+    \end{samepage}
+```
+
+-->
+
+<!-- Disabled section: Consultation. Creighton University -->

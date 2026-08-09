@@ -1,0 +1,230 @@
+/* resume.css -----------------------------------------------------------------
+   HTML counterpart to resume.cls. Every value here traces back to a decision in
+   the class rather than to taste: the 2cm geometry margins, primaryColor
+   RGB(0,0,150), the 4.5cm/6.2cm right columns of twocolentry/software, the 3
+   columns of the skills environment, and the lmss sans-serif body font.
+---------------------------------------------------------------------------- */
+
+:root {
+  --primary-color: #000096;
+  --rule-color: #000;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.35;
+  color: #000;
+}
+
+/* The class sets 2cm margins on a 21cm page. */
+main.content,
+#quarto-document-content {
+  max-width: 17cm;
+  padding: 0 0 2cm;
+  margin: 0 auto;
+}
+
+/* No title block: the header is generated from metadata by resume.lua. */
+#title-block-header {
+  display: none;
+}
+
+/* Nothing is ever placed in the margin, so don't let it reserve a column. */
+#quarto-margin-sidebar {
+  display: none;
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header --------------------------------------------------------------------
+   Mirrors the `header` environment: centred, linespread 1.5, 25pt name line,
+   contacts separated by a vertical bar. */
+
+.resume-header {
+  text-align: center;
+  line-height: 1.5;
+  padding-top: 2cm;
+  margin-bottom: 0.2cm;
+}
+
+.resume-header .name-line {
+  font-size: 25pt;
+  line-height: 1.1;
+  margin-bottom: 5pt;
+}
+
+.resume-header .headline {
+  font-weight: 700;
+}
+
+.resume-header .contacts {
+  font-size: 10.5pt;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5pt;
+}
+
+.resume-header .contacts .sep {
+  color: #000;
+}
+
+/* Sections ------------------------------------------------------------------
+   \titleformat{\section}{\bfseries\large}[\vspace{1pt}\titlerule]
+   \titlespacing{\section}{-1pt}{0.3cm}{0.2cm} */
+
+.content h1,
+.content h2 {
+  font-size: 1.2em;
+  font-weight: 700;
+  margin: 0.3cm 0 0.2cm;
+  padding-bottom: 1pt;
+  border-bottom: 0.4pt solid var(--rule-color);
+}
+
+/* Professional summary: \begin{centering}\Large ... */
+
+.summary {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+/* Entries -------------------------------------------------------------------
+   twocolentry / software are paracol layouts with a fixed-width right column
+   (4.5cm and 6.2cm respectively) holding dates or a project link. */
+
+.twocolentry,
+.threecolentry,
+.software,
+.pubs,
+.patents {
+  display: flex;
+  align-items: baseline;
+  gap: 0.15cm;
+  margin-top: 0.2cm;
+  margin-bottom: 0.1cm;
+}
+
+.twocolentry > :first-child,
+.threecolentry > :first-child,
+.software > :first-child,
+.pubs > :first-child,
+.patents > :first-child {
+  flex: 1 1 auto;
+  margin: 0;
+}
+
+.twocolentry > .right,
+.threecolentry > .right {
+  flex: 0 0 4.5cm;
+  text-align: right;
+}
+
+.software > .right {
+  flex: 0 0 6.2cm;
+  text-align: right;
+  font-weight: 700;
+}
+
+.pubs > .right {
+  flex: 0 0 1.5cm;
+  text-align: right;
+  font-weight: 700;
+}
+
+.patents > .right {
+  flex: 0 0 3.5cm;
+  text-align: right;
+}
+
+/* adjustwidth with ~0cm on both sides: a structural wrapper, not a visual one. */
+.onecolentry {
+  margin: 0;
+}
+
+/* Bullets -------------------------------------------------------------------
+   topsep 0.10cm, parsep 0.10cm, itemsep 0, leftmargin 1cm */
+
+.highlights {
+  margin: 0.1cm 0;
+}
+
+.highlights ul {
+  margin: 0;
+  padding-left: 1cm;
+  list-style-type: disc;
+}
+
+.highlights li {
+  margin: 0 0 0.1cm;
+}
+
+.highlights li:last-child {
+  margin-bottom: 0;
+}
+
+/* Skills: \begin{multicols}{3} with \columnsep 0.15cm */
+
+.skills ul {
+  columns: 3;
+  column-gap: 0.15cm;
+  margin: 0 0 0.2cm;
+  padding-left: 1cm;
+}
+
+.skills li {
+  margin: 0;
+  break-inside: avoid;
+}
+
+@media (max-width: 34rem) {
+  .skills ul {
+    columns: 2;
+  }
+
+  .twocolentry,
+  .threecolentry,
+  .software,
+  .pubs,
+  .patents {
+    display: block;
+  }
+
+  .twocolentry > .right,
+  .threecolentry > .right,
+  .software > .right,
+  .pubs > .right,
+  .patents > .right {
+    text-align: left;
+  }
+}
+
+/* Print: reproduce the PDF's page geometry as closely as the browser allows. */
+
+@media print {
+  @page {
+    margin: 2cm;
+  }
+
+  body {
+    font-size: 10pt;
+  }
+
+  .resume-header {
+    padding-top: 0;
+  }
+
+  main.content,
+  #quarto-document-content {
+    max-width: none;
+    padding: 0;
+  }
+}
